@@ -1,25 +1,15 @@
-public class Desenvolvedor extends Funcionario implements Trabalhavel {
-    private String tecnologias;
+import java.util.List;
 
-    public Desenvolvedor(String nome, String matricula, String tecnologias) {
-        super(nome, matricula);
+public class Desenvolvedor extends Funcionario {
+    private List<String> tecnologias;
+
+    public Desenvolvedor(String nome, int matricula, double salario, List<String> tecnologias) {
+        super(nome, matricula, salario);
         this.tecnologias = tecnologias;
     }
 
     @Override
-    public double calcularSalario() {
-        // Implemente o cálculo do salário para o desenvolvedor
-        return 0.0; // implemente conforme a lógica necessária
-    }
-
-    // Implementação dos métodos da interface Trabalhavel
-    @Override
-    public void trabalhar() {
-        // Implemente a lógica para o trabalho de um desenvolvedor
-    }
-
-    @Override
-    public void relatarProgresso() {
-        // Implemente a lógica para relatar o progresso de um desenvolvedor
+    public String toString() {
+        return "Desenvolvedor - " + super.toString();
     }
 }
